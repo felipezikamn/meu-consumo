@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Meu Consumo</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <h1 class="titulo">
+    Meu Consumo
+  </h1>
+
+  <div class="container">
+
+    <!-- ESQUERDA -->
+
+    <div class="painel">
+
+      <h2>
+        Conta de Luz
+      </h2>
+
+      <img
+        src="conta.jpg"
+        class="imagem"
+      >
+
+      <p>
+        Confira na conta a leitura atual,
+        leitura anterior e o consumo em kWh.
+      </p>
+
+    </div>
+
+    <!-- MEIO -->
+
+    <div class="calculadora">
+
+      <h2>
+        Calculadora
+      </h2>
+
+      <label>Leitura Atual</label>
+
+      <input
+        type="number"
+        id="leituraAtual"
+        placeholder="24537"
+      >
+
+      <label>Última Leitura</label>
+
+      <input
+        type="number"
+        id="leituraAnterior"
+        placeholder="23997"
+      >
+
+      <label>Concessionária</label>
+
+      <select id="concessionaria">
+
+        <option value="0.738">
+          Amazonas Energia
+        </option>
+
+        <option value="0.92">
+          Enel
+        </option>
+
+        <option value="1.05">
+          Light
+        </option>
+
+      </select>
+
+      <label>
+        Tarifa Manual
+      </label>
+
+      <input
+        type="number"
+        id="tarifaManual"
+        placeholder="0.738"
+        step="0.001"
+      >
+
+      <button onclick="calcular()">
+        Calcular
+      </button>
+
+      <div class="resultado">
+
+        <p id="consumo">
+          Consumo: 0 kWh
+        </p>
+
+        <p id="valor">
+          Valor estimado: R$0,00
+        </p>
+
+        <p id="alerta"></p>
+
+      </div>
+
+    </div>
+
+    <!-- DIREITA -->
+
+    <div class="painel">
+
+      <h2>
+        Medidor
+      </h2>
+
+      <img
+        src="contador.jpg"
+        class="imagem"
+      >
+
+      <p>
+        Utilize o número exibido
+        no visor do medidor.
+      </p>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
